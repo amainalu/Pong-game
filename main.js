@@ -1,11 +1,14 @@
 const game = new Game();
-
 function preload() {
-  ballImg = loadImage("/Images/ball.png");
+  courtImg = loadImage("/Images/table.jpg");
+  ballImg = loadImage("/Images/pongball.png");
+  paddleImg = loadImage("/Images/ping-pong-paddle.png");
 }
 
 function setup() {
-  createCanvas(WIDTH * 2, WIDTH);
+  let canvas = createCanvas(WIDTH, HEIGHT);
+  canvas.parent("canvas");
+  game.setup();
 }
 
 function draw() {

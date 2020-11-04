@@ -9,11 +9,27 @@
 </head>
 <body>
     <h1>
-        <p>WELCOME TO THE PING PONG TOURNAMENT</p>
-    </h1>   
+        WELCOME TO THE PING PONG TOURNAMENT
+    </h1> 
+    <div id="canvas">
+        
+    </div>
+    
+    <form class="level">
+        <label for="level">Select your level</label>
+            <select name="level" id="level">
+                <option value="level1">Level 1</option>
+                <option value="level2">Level 2</option>
+                <option value="level3">Level 3</option>
+            </select>
+    </form>
+    <div id="clock">
+        <span id="number">4</span>
+    </div>
     
     
     <script src="constants.js"></script>
+    <script src="Background.js"></script>
     <script src="Ball.js"></script>
     <script src="Player.js"></script>
     <script src="Game.js"></script>

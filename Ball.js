@@ -18,16 +18,13 @@ class Ball {
     this.x += xSpeed;
     this.y += ySpeed;
 
-    if (this.y > WIDTH - this.diameter || this.y < this.diameter) {
+    if (this.y > HEIGHT - this.diameter || this.y < this.diameter) {
       ySpeed = -ySpeed;
     }
-    // if (this.x - radius > WIDTH * 2 || this.x + radius < 0) {
-    //   xSpeed = -xSpeed;
-    // }
   }
 
   edges() {
-    if (this.x - radius > WIDTH * 2) {
+    if (this.x - radius > WIDTH) {
       this.reset();
     }
     if (this.x + radius < 0) {

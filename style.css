@@ -1,5 +1,22 @@
-h1{
-    display:flex;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: darkgreen;
+h1 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  background-color: darkgreen;
+  width: 950px;
+}
+
+.level {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font: bold;
+}
+
+#clock {
+  display: flex;
+  margin-left: 450px;
+  margin-top: -350px;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 100px;
 }
