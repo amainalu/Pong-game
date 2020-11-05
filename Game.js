@@ -16,10 +16,11 @@ class Game {
   }
   draw() {
     this.background.draw();
+    this.ball.velocity();
     this.ball.draw();
     this.player1.draw();
     this.player2.draw();
-    this.ball.velocity();
+
     this.ball.collisionCheckP1(this.player1);
     this.ball.collisionCheckP2(this.player2);
     this.player2Movement();
@@ -42,19 +43,19 @@ class Game {
 
     //move up
     if (keyIsDown(38)) {
-      this.player1.moveUp(5);
+      this.player1.moveUp(steps);
     }
     //move down
     if (keyIsDown(40)) {
-      this.player1.moveDown(5);
+      this.player1.moveDown(steps);
     }
     //move foward
     if (keyIsDown(39)) {
-      this.player1.moveFoward(5);
+      this.player1.moveFoward(steps);
     }
     //move backwards
     if (keyIsDown(37)) {
-      this.player1.moveBackwards(5);
+      this.player1.moveBackwards(steps);
     }
   }
 
@@ -100,7 +101,7 @@ class Game {
   //player 2: machine movement.
   player2Movement() {
     this.player2.y += player2Speed;
-    if (this.player2.y <= 0 || this.player2.y === HEIGHT - 50) {
+    if (this.player2.y <= 0 || this.player2.y >= HEIGHT) {
       player2Speed = -player2Speed;
     }
   }
@@ -111,9 +112,14 @@ selectedLevel.addEventListener("change", (event) => {
   const value = event.target.value;
   if (value === "level1") {
     ySpeed += 2;
+    xSpeed += 3;
   } else if (value === "level2") {
     ySpeed += 3;
+    xSpeed += 4;
+    player2Speed = 35;
   } else {
-    ySpeed += 5;
+    ySpeed += 3;
+    xSpeed += 4;
+    player2Speed = 65;
   }
 });

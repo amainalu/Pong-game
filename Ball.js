@@ -41,14 +41,17 @@ class Ball {
     const ballLeftSide = this.x - this.radius;
     const ballBottomSide = this.y + this.radius;
     const ballTopSide = this.y - this.radius;
+    const ballRightSide = this.x + this.radius;
     const player1RightSide = player.x + player.width;
+    const player1LeftSide = player.x;
     const player1TopSide = player.y;
     const player1BottomSide = player.y + player.height;
 
     if (
       ballLeftSide <= player1RightSide &&
       ballBottomSide >= player1TopSide &&
-      ballTopSide <= player1BottomSide
+      ballTopSide <= player1BottomSide &&
+      ballRightSide >= player1LeftSide
     ) {
       // console.log("touching");
       xSpeed = -xSpeed;
@@ -63,16 +66,19 @@ class Ball {
 
   collisionCheckP2(player) {
     const ballRightSide = this.x + this.radius;
+    const ballLeftSide = this.x - this.radius;
     const ballBottomSide = this.y + this.radius;
     const ballTopSide = this.y - this.radius;
     const player2LeftSide = player.x;
+    const player2RightSide = player.x + player.width;
     const player2TopSide = player.y;
     const player2BottomSide = player.y + player.height;
 
     if (
       ballRightSide >= player2LeftSide &&
       ballBottomSide >= player2TopSide &&
-      ballTopSide <= player2BottomSide
+      ballTopSide <= player2BottomSide &&
+      ballLeftSide <= player2RightSide
     ) {
       //  console.log("touching");
       xSpeed = -xSpeed;

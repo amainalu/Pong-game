@@ -2,8 +2,8 @@ class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.height = 100;
-    this.width = 60;
+    this.height = 90;
+    this.width = 45;
   }
   moveUp(steps) {
     if (this.y <= 0) {
