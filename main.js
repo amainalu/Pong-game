@@ -1,8 +1,8 @@
 const game = new Game();
 function preload() {
-  courtImg = loadImage("/Images/table.jpg");
-  ballImg = loadImage("/Images/pongball.png");
-  paddleImg = loadImage("/Images/ping-pong-paddle.png");
+  courtImg = loadImage("./Images/table.jpg");
+  ballImg = loadImage("./Images/pongball.png");
+  paddleImg = loadImage("./Images/ping-pong-paddle.png");
 }
 
 function setup() {
