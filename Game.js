@@ -26,17 +26,17 @@ class Game {
     this.player2Movement();
 
     fill(255, 255, 255, 250);
-    rect(100, 5, 150, 40, 40);
+    rect(100, 5, 100, 40, 40);
     textSize(18);
     textStyle(BOLD);
     fill(0, 0, 0);
-    text(`Away:${this.score1}`, 125, 30);
+    text(`Away:${this.score1}`, 115, 30);
     fill(255, 255, 255, 250);
-    rect(675, 5, 150, 40, 40);
+    rect(675, 5, 100, 40, 40);
     textSize(18);
     textStyle(BOLD);
     fill(0, 0, 0);
-    text(`Home:${this.score2}`, 700, 30);
+    text(`Home:${this.score2}`, 690, 30);
 
     this.edges(this.ball);
     // console.log("the score is changing");
@@ -61,6 +61,7 @@ class Game {
 
   edges(ball) {
     if (ball.x - radius > WIDTH) {
+      songPoint.play();
       this.score1++;
       noLoop();
       this.counterClock(ball);
@@ -68,6 +69,7 @@ class Game {
       // console.log(this.score1);
     }
     if (ball.x + radius < 0) {
+      songPoint.play();
       this.score2++;
       noLoop();
       this.counterClock(ball);
@@ -111,15 +113,15 @@ const selectedLevel = document.getElementById("level");
 selectedLevel.addEventListener("change", (event) => {
   const value = event.target.value;
   if (value === "level1") {
-    ySpeed += 2;
-    xSpeed += 3;
+    ySpeed += 0.5;
+    xSpeed += 1;
   } else if (value === "level2") {
-    ySpeed += 3;
-    xSpeed += 4;
-    player2Speed = 35;
+    ySpeed += 1;
+    xSpeed += 1;
+    player2Speed = 55;
   } else {
-    ySpeed += 3;
-    xSpeed += 4;
-    player2Speed = 65;
+    ySpeed += 1.5;
+    xSpeed += 1.5;
+    player2Speed = 75;
   }
 });

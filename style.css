@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -10,13 +15,49 @@ h1 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   font: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin: 0 auto;
+  font-size: 2em;
 }
 
 #clock {
   display: flex;
-  margin-left: 450px;
-  margin-top: -350px;
+  margin-left: 900px;
+  margin-top: -400px;
   z-index: 1;
   font-weight: bold;
-  font-size: 100px;
+  color: white;
+  font-size: 200px;
+  text-shadow: #fc0 1px 0 10px;
+}
+.startbutton {
+  size: 20px;
+  position: absolute;
+  left: 445px;
+  top: 300px;
+  background-color: #fff;
+  font-weight: 600;
+  padding: 3rem 1.5rem;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
+#level {
+  padding: 0.5em;
+  font-size: 20px;
+  font-family: cambria;
+  font-weight: bold;
+}
+#canvas,
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0 auto;
 }

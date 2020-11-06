@@ -53,15 +53,9 @@ class Ball {
       ballTopSide <= player1BottomSide &&
       ballRightSide >= player1LeftSide
     ) {
-      // console.log("touching");
+      songSlap.play();
       xSpeed = -xSpeed;
     }
-    // const isNotToTheLeft = player1RightSide >= ballLeftSide;
-    // const isNotToTheTop = player1TopSide <= ballBottomSide;
-    // const isNotToBottom = player1BottomSide >= ballTopSide;
-    // if (isNotToTheLeft && isNotToTheTop && isNotToBottom) {
-    //   xSpeed = -xSpeed;
-    // }
   }
 
   collisionCheckP2(player) {
@@ -80,7 +74,7 @@ class Ball {
       ballTopSide <= player2BottomSide &&
       ballLeftSide <= player2RightSide
     ) {
-      //  console.log("touching");
+      songSlap.play();
       xSpeed = -xSpeed;
     }
   }
